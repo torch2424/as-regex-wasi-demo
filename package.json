@@ -1,12 +1,13 @@
 {
   "scripts": {
-    "asbuild:untouched": "asc assembly/index.ts --target debug",
-    "asbuild:optimized": "asc assembly/index.ts --target release",
-    "build": "npm run asbuild:untouched && npm run asbuild:optimized",
-    "start": "ls"
+    "start": "npm run build && npm run wasmtime",
+    "build": "asc assembly/index.ts --target release",
+    "wasmtime": "wasmtime build/optimized.wasm \"fo*\" \"table football, foul\""
   },
   "dependencies": {
-    "@assemblyscript/loader": "^0.17.14"
+    "@assemblyscript/loader": "^0.17.14",
+    "as-wasi": "^0.4.4",
+    "assemblyscript-regex": "git+https://github.com/ColinEberhardt/assemblyscript-regex.git"
   },
   "devDependencies": {
     "assemblyscript": "^0.17.14"
