@@ -7,7 +7,7 @@
   "dependencies": {
     "@assemblyscript/loader": "^0.17.14",
     "as-wasi": "^0.4.4",
-    "assemblyscript-regex": "git+https://github.com/ColinEberhardt/assemblyscript-regex.git"
+    "assemblyscript-regex": "^1.1.0"
   },
   "devDependencies": {
     "assemblyscript": "^0.17.14"
